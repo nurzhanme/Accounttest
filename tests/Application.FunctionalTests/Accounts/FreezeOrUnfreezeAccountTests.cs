@@ -23,7 +23,7 @@ public class FreezeOrUnfreezeAccountTests : BaseTestFixture
 
         var createCommand = new CreateAccountCommand
         {
-            AccountNumber = "01234567899876543210",
+            AccountNumber = "01234567899876543211",
             Username = "Test"
             Type = AccountType.Savings
         };
