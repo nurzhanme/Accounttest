@@ -7,7 +7,7 @@ public class AccountFrozenOrUnfrozenEventHandler : INotificationHandler<AccountF
 {
     private readonly ILogger<AccountFrozenOrUnfrozenEventHandler> _logger;
 
-    public TodoItemCompletedEventHandler(ILogger<AccountFrozenOrUnfrozenEventHandler> logger)
+    public AccountFrozenOrUnfrozenEventHandler(ILogger<AccountFrozenOrUnfrozenEventHandler> logger)
     {
         _logger = logger;
     }
