@@ -89,18 +89,13 @@ public class ApplicationDbContextInitialiser
 
         // Default data
         // Seed, if necessary
-        if (!_context.TodoLists.Any())
+        if (!_context.Accounts.Any())
         {
-            _context.TodoLists.Add(new TodoList
+            _context.Account.Add(new Account
             {
-                Title = "Todo List",
-                Items =
-                {
-                    new TodoItem { Title = "Make a todo list 📃" },
-                    new TodoItem { Title = "Check off the first item ✅" },
-                    new TodoItem { Title = "Realise you've already done two things on the list! 🤯"},
-                    new TodoItem { Title = "Reward yourself with a nice, long nap 🏆" },
-                }
+                AccountNumber = "12345678901234567890",
+                UserName = "nurzhan",
+                Type = AccountType.Savings
             });
 
             await _context.SaveChangesAsync();
