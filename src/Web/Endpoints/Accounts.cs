@@ -16,9 +16,9 @@ public class Accounts : EndpointGroupBase
             .MapPut(FreezeOrUnfreezeAccount, "{id}");
     }
 
-    public Task<PaginatedList<AccountBriefDto>> GetTodoItemsWithPagination(ISender sender, [AsParameters] GetAccountsWithPaginationQuery query)
+    public Task<TodosVm> GetAccounts(ISender sender)
     {
-        return sender.Send(query);
+        return  sender.Send(new GetAccountsQuery());
     }
 
     public Task<int> CreateAccount(ISender sender, CreateAccountCommand command)

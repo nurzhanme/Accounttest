@@ -1,8 +1,8 @@
 ﻿using CleanArchitecture.Domain.Entities;
 
-namespace CleanArchitecture.Application.Accounts.Queries.GetAccountsWithPagination;
+namespace CleanArchitecture.Application.Accounts.Queries.GetAccounts;
 
-public class AccountBriefDto
+public class AccountDto
 {
     public int Id { get; init; }
 
@@ -16,7 +16,7 @@ public class AccountBriefDto
     {
         public Mapping()
         {
-            CreateMap<Account, AccountBriefDto>();
+            CreateMap<Account, AccountDto>();
         }
     }
 }
