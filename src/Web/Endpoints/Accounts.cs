@@ -16,7 +16,7 @@ public class Accounts : EndpointGroupBase
             .MapPut(FreezeOrUnfreezeAccount, "{id}");
     }
 
-    public Task<TodosVm> GetAccounts(ISender sender)
+    public Task<AccountsVm> GetAccounts(ISender sender)
     {
         return  sender.Send(new GetAccountsQuery());
     }
