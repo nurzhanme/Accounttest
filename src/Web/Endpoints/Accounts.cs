@@ -1,7 +1,7 @@
 using CleanArchitecture.Application.Common.Models;
-using CleanArchitecture.Application.Accounts.Commands.CreateTodoAccount;
+using CleanArchitecture.Application.Accounts.Commands.CreateAccount;
 using CleanArchitecture.Application.Accounts.Commands.FreezeOrUnfreezeAccount;
-using CleanArchitecture.Application.Accounts.Queries.GetTodoItemsWithPagination;
+using CleanArchitecture.Application.Accounts.Queries.GetAccounts;
 
 namespace CleanArchitecture.Web.Endpoints;
 
