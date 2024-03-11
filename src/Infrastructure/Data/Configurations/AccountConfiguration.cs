@@ -10,14 +10,13 @@ public class AccountConfiguration : IEntityTypeConfiguration<Account>
     {
         builder.Property(t => t.AccountNumber)
             .HasMaxLength(20)
-            .IsRequired()
-            .IsUnique();
+            .IsRequired();
         
         builder.Property(t => t.Username)
             .HasMaxLength(50)
             .IsRequired();
 
-        builder.HasIndex(e => e.Username)
+        builder.HasIndex(e => e.AccountNumber)
             .IsUnique();
     }
 }
