@@ -1,6 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using CleanArchitecture.Domain.Constants;
 using CleanArchitecture.Domain.Entities;
+using CleanArchitecture.Domain.Enums;
 using CleanArchitecture.Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -91,10 +92,10 @@ public class ApplicationDbContextInitialiser
         // Seed, if necessary
         if (!_context.Accounts.Any())
         {
-            _context.Account.Add(new Account
+            _context.Accounts.Add(new Account
             {
                 AccountNumber = "12345678901234567890",
-                UserName = "nurzhan",
+                Username = "nurzhan",
                 Type = AccountType.Savings
             });
 
