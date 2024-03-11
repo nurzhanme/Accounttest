@@ -2,16 +2,16 @@
 using CleanArchitecture.Application.Common.Mappings;
 using CleanArchitecture.Application.Common.Models;
 
-namespace CleanArchitecture.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace CleanArchitecture.Application.Accounts.Queries.GetAccountsWithPagination;
 
-public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
+public record GetAccountsWithPaginationQuery : IRequest<PaginatedList<AccountBriefDto>>
 {
     public int ListId { get; init; }
     public int PageNumber { get; init; } = 1;
     public int PageSize { get; init; } = 10;
 }
 
-public class GetTodoItemsWithPaginationQueryHandler : IRequestHandler<GetTodoItemsWithPaginationQuery, PaginatedList<TodoItemBriefDto>>
+public class GetTodoItemsWithPaginationQueryHandler : IRequestHandler<GetAccountsWithPaginationQuery, PaginatedList<TodoItemBriefDto>>
 {
     private readonly IApplicationDbContext _context;
     private readonly IMapper _mapper;
@@ -22,12 +22,12 @@ public class GetTodoItemsWithPaginationQueryHandler : IRequestHandler<GetTodoIte
         _mapper = mapper;
     }
 
-    public async Task<PaginatedList<TodoItemBriefDto>> Handle(GetTodoItemsWithPaginationQuery request, CancellationToken cancellationToken)
+    public async Task<PaginatedList<TodoItemBriefDto>> Handle(GetAccountsWithPaginationQuery request, CancellationToken cancellationToken)
     {
-        return await _context.TodoItems
+        return await _context.Accounts
             .Where(x => x.ListId == request.ListId)
             .OrderBy(x => x.Title)
-            .ProjectTo<TodoItemBriefDto>(_mapper.ConfigurationProvider)
+            .ProjectTo<AccountBriefDto>(_mapper.ConfigurationProvider)
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }
 }
