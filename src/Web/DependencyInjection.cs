@@ -26,8 +26,7 @@ public static class DependencyInjection
 
         services.AddExceptionHandler<CustomExceptionHandler>();
 
-        services.AddRazorPages();
-
+        
         // Customise default API behaviour
         services.Configure<ApiBehaviorOptions>(options =>
             options.SuppressModelStateInvalidFilter = true);
@@ -36,7 +35,7 @@ public static class DependencyInjection
 
         services.AddOpenApiDocument((configure, sp) =>
         {
-            configure.Title = "CleanArchitecture API";
+            configure.Title = "Accounts API";
 
 #if (UseApiOnly)
             // Add JWT
