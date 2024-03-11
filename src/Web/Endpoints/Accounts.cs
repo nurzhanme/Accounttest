@@ -11,7 +11,7 @@ public class Accounts : EndpointGroupBase
     {
         app.MapGroup(this)
             //.RequireAuthorization()
-            .MapGet(GetTodoItemsWithPagination)
+            .MapGet(GetAccounts)
             .MapPost(CreateAccount)
             .MapPut(FreezeOrUnfreezeAccount, "{id}");
     }
