@@ -1,6 +1,6 @@
 namespace CleanArchitecture.Application.Accounts.Commands.CreateAccount;
 
-public class CreateAccountValidator : AbstractValidator<CreateAccountCommand>
+public class CreateAccountCommandValidator : AbstractValidator<CreateAccountCommand>
 {
     public CreateAccountCommandValidator()
     {

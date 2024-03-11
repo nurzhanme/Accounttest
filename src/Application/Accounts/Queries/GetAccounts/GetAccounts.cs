@@ -3,7 +3,7 @@ using CleanArchitecture.Application.Common.Models;
 using CleanArchitecture.Application.Common.Security;
 using CleanArchitecture.Domain.Enums;
 
-namespace CleanArchitecture.Application.Accounts.Queries.Accounts;
+namespace CleanArchitecture.Application.Accounts.Queries.GetAccounts;
 
 public record GetAccountsQuery : IRequest<AccountsVm>;
 
