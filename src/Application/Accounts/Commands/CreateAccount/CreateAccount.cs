@@ -7,8 +7,8 @@ namespace CleanArchitecture.Application.Accounts.Commands.CreateAccount;
 
 public record CreateAccountCommand : IRequest<int>
 {
-    public string AccountNumber { get; init; }
-    public string Username { get; init; }
+    public string? AccountNumber { get; init; }
+    public string? Username { get; init; }
     public AccountType Type { get; init; }
 }
 
