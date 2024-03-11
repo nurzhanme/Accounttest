@@ -2,8 +2,6 @@ namespace CleanArchitecture.Domain.Entities;
 
 public class Account : BaseAuditableEntity
 {
-    public int Id { get; set; }
-
     public string AccountNumber { get; set; }
 
     public string Username { get; set; }
